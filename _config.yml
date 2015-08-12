@@ -106,7 +106,6 @@ customLinks:
       url: http://javabynataraj.blogspot.in/
     message: About Java
 
-
 #baidu tongji
 baiduTongji:
   config: true
