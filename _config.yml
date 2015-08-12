@@ -42,7 +42,7 @@ timezone:      null
 title: 9leg
 description: 技术人生
 keywords: android／java
-url: http://zyc945.github.io/
+url: http://zyc945.github.io
 feed: /atom.xml
 favicon: /images/shortcut.jpg
 
@@ -106,10 +106,6 @@ customLinks:
       url: http://javabynataraj.blogspot.in/
     message: About Java
 
-#googleAnaly, your id link UA-12345678-X
-googleAnaly:
-  config: false
-  id: 
 
 #baidu tongji
 baiduTongji:
@@ -119,7 +115,7 @@ baiduTongji:
 #comment config
 disqus:
   config: false
-  id: piznblog
+  id: ''
 
 duoshuo:
   config: true
