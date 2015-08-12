@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "gem install jekyll no respond solution"
+date:   2015-08-12 16:24:28
+categories: jekyll 
+---
 ###用gem安装jekyll长时间无响应的一种解决办法
 要安装jekyll了，可是运行
 
