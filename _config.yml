@@ -3,9 +3,9 @@ title: z writes
 email: zyc945@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   技术人生、读书感悟
-baseurl: "/blog/" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
+twitter_username: zoc13
 github_username:  zyc945
 
 # Build settings
