@@ -1,126 +1,46 @@
-# Where things are
-source:       .
-destination:  ./_site
-plugins:      ./_plugins
-layouts:      ./_layouts
-paginate:     8
+# Jekyll configuration precedence:
+# 1. Gruntfile task
+# 2. config.build.yml
+# 3. config.yml
 
-# Handling Reading
-safe:         false
-include:      [".htaccess"]
-exclude:      []
-keep_files:   [".git", ".svn"]
-encoding:     "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-textile_ext:  "textile"
-
-# Filtering Content
-show_drafts:  null
-limit_posts:  0
-future:       true
-unpublished:  false
-
-# Conversion
-markdown:     kramdown
-highlighter:  pygments
-lsi:          false
-excerpt_separator: "\n\n"
-
-# Serving
-detach:       false
-port:         4000
-host:         127.0.0.1
-baseurl:      "" # does not include hostname
-
-# Outputting
-permalink:     date
-paginate_path: /page:num
-timezone:      null
-
-
-#Site config
-title: 9leg
-description: 技术人生
-keywords: android／java
-url: http://zyc945.github.io
-feed: /atom.xml
-favicon: /images/shortcut.jpg
-
-#Nav config
-nav:
-  - text: 首页
-    url: /index.html
-  - text: 分类目录 
-    url: /categories.html
-  - text: 文章归档
-    url: /archives.html
-  - text: 关于我
-    url: /about.html
-  - text: 友情链接
-    url: /links.html
-
-#Author config
+name: Mrz
+description: 'mrz blog'
 author:
-    name: mrz
-    email: zyc945@gmail.com
-    imageLink: /images/header.jpg
-    simpleIntro: Mr z
-    detailIntro:
-      <p>programmer.</p>
-      <p>Android developer.</p>
-      <p></p>
+  name: Mrz
+  email: zyc945@gmail.com
+baseurl: http://zyc945.github.io/
+rssurl:
 
-#Follow me, you can choose your icon by http://fortawesome.github.io/Font-Awesome/icons/#brand
-follow:
-  - class: icon-rss
-    url: /atom.xml
-  - class: icon-weibo
-    url: http://weibo.com/
-  - class: icon-facebook
-    url: http://facebook.com/
-  - class: icon-github-alt
-    url: https://github.com/zJiaJun/
-  - class: icon-twitter
-    url: http://twitter.com/
+# Grunt handles images and assets.
+exclude: ['img', 'css', 'js', 'fonts',
+          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
 
-#Links
-customLinks:
-  - item:
-    - text: 技术小黑屋
-      url: http://droidyue.com/
-    - text: Jekyll
-      url: http://jekyllrb.com
-    - text: Jekyll Theme
-      url: http://www.zhanxin.info/themes.html
-    message: Friends    
-  - item:
-    - text: Java Code Geeks
-      url: http://www.javacodegeeks.com/
-    - text: Web Developer
-      url: http://www.fromdev.com/
-    - text: BeginnersBook
-      url: http://beginnersbook.com/
-    - text: Mkyong
-      url: http://www.mkyong.com/
-    - text: Java By Nataraj
-      url: http://javabynataraj.blogspot.in/
-    message: About Java
+include: ['.htaccess', '.nojekyll']
 
-#baidu tongji
-baiduTongji:
-  config: true
-  id: 7b5951ffbe4a1733f8a713a713fef36d
+# _config.build.yml sets future and show_drafts to false on `grunt build`
+future: true
+show_drafts: true
+debug: true
 
-#comment config
-disqus:
-  config: false
-  id: ''
+permalink: pretty
 
-duoshuo:
-  config: true
-  id: zyc945
+# Markdown library
+markdown: redcarpet
+  # extensions: ['fenced_code_blocks', 'smart']
 
-#baidu share config
-baiduShare:
-  config: true
-  
+pygments: true
+
+encoding: utf-8
+
+source: app
+destination: .jekyll
+
+sitemap:
+  file: '/sitemap.xml'
+  exclude:
+    - '/404.html'
+    - '/atom.xml'
+  include_posts:
+    - '/index.html'
+  change_frequency_name: 'change_frequency'
+  priority_name: 'priority'
