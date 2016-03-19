@@ -4,7 +4,7 @@
 # 3. config.yml
 
 name: Mrz
-description: 'Mrz blos'
+description: 'Mrz blogs'
 author:
   name: Mrz
   email: zyc945@gmail.com
@@ -28,7 +28,8 @@ permalink: pretty
 markdown: redcarpet
   # extensions: ['fenced_code_blocks', 'smart']
 
-pygments: true
+  #pygments: true
+highlighter: true
 
 encoding: utf-8
 
